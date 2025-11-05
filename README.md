@@ -25,13 +25,16 @@ The chatbot, named **Jarvis**, answers user queries with a joyful and friendly t
 ---
 
 ## 📁 Project Structure
+
+```
 QnA_Chatbot_GROQ/
 │
-├── app.py # Main Streamlit app
-├── requirements.txt # Python dependencies
-├── .env # Environment variables (not uploaded)
-└── README.md # Project documentation
-
+├── app.py                # Main Streamlit app
+├── requirements.txt      # Python dependencies
+├── .env                  # Environment variables (not uploaded)
+├── .gitignore            # To hide .env and cache files
+└── README.md             # Project documentation
+```
 
 ---
 
@@ -41,80 +44,90 @@ QnA_Chatbot_GROQ/
 ```bash
 git clone https://github.com/Yousuf7309/QnA_Chatbot_GROQ.git
 cd QnA_Chatbot_GROQ
+```
 
-2. Create a virtual environment
+### 2. Create a virtual environment
+```bash
 python -m venv venv
+```
 
-Activate it
+Activate it:
+- **Windows:** `venv\Scripts\activate`
+- **macOS/Linux:** `source venv/bin/activate`
 
-3. Install dependencies
+### 3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-4. Add environment variables
-Create a .env file in the root directory and add:
+### 4. Add environment variables
+
+Create a `.env` file in the root directory and add:
+```
 LANGCHAIN_API_KEY=your_langchain_api_key_here
 GROQ_API_KEY=your_groq_api_key_here
+```
 
-⚠️ Important: Do not upload the .env file to GitHub.
+⚠️ **Important:** Do not upload the `.env` file to GitHub.
 
-▶️ Run the Application
+---
+
+## ▶️ Run the Application
+
+```bash
 streamlit run app.py
+```
 
 Then open the app in your browser at:
+```
 http://localhost:8501
+```
 
+---
 
-🧩 How It Works
+## 🧩 How It Works
 
+1. The user enters a question in the text input field.  
+2. The app sends the query to the selected Groq model via **LangChain**.  
+3. The model returns a response which is displayed in the Streamlit interface.  
+4. The user can adjust the temperature and max tokens in the sidebar.
 
-The user enters a question in the text input field.
+---
 
+## 🧰 Requirements
 
-The app sends the query to the selected Groq model via LangChain.
-
-
-The model returns a response which is displayed in the Streamlit interface.
-
-
-The user can adjust the temperature and max tokens in the sidebar.
-
-
-
-🧰 Requirements
+```txt
 streamlit
 langchain
 langchain_groq
 langchain_core
 python-dotenv
+```
 
+---
 
-🌐 Deployment (Optional)
-If you want to deploy this app to Streamlit Cloud:
+## 🌐 Deployment (Optional)
 
+If you want to deploy this app to **Streamlit Cloud**:
+1. Push your code to GitHub (without `.env`).
+2. Go to [https://share.streamlit.io](https://share.streamlit.io).
+3. Connect your GitHub repository.
+4. Add your API keys under **Secrets** in Streamlit:
+   ```
+   LANGCHAIN_API_KEY = your_langchain_api_key
+   GROQ_API_KEY = your_groq_api_key
+   ```
+5. Deploy 🚀
 
-Push your code to GitHub (without .env).
+---
 
+## 👨‍💻 Author
 
-Go to https://share.streamlit.io.
+**Mohammed Yousuf**  
+GitHub: [Yousuf7309](https://github.com/Yousuf7309)
 
+---
 
-Connect your GitHub repository.
+## ⭐ Support
 
-
-Add your API keys under Secrets in Streamlit:
-LANGCHAIN_API_KEY = your_langchain_api_key
-GROQ_API_KEY = your_groq_api_key
-
-
-
-Deploy 🚀
-
-
-
-👨‍💻 Author
-Mohammed Yousuf
-
-⭐ Support
 If you found this project helpful, consider giving it a star on GitHub ⭐
-
-
