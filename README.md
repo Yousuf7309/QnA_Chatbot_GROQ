@@ -32,7 +32,6 @@ QnA_Chatbot_GROQ/
 ├── app.py                # Main Streamlit app
 ├── requirements.txt      # Python dependencies
 ├── .env                  # Environment variables (not uploaded)
-├── .gitignore            # To hide .env and cache files
 └── README.md             # Project documentation
 ```
 
@@ -50,10 +49,7 @@ cd QnA_Chatbot_GROQ
 ```bash
 python -m venv venv
 ```
-
-Activate it:
-- **Windows:** `venv\Scripts\activate`
-- **macOS/Linux:** `source venv/bin/activate`
+Activate it
 
 ### 3. Install dependencies
 ```bash
